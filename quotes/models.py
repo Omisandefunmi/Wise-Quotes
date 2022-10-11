@@ -9,7 +9,7 @@ class Quote(models.Model):
         ("AGQ", "Api_generated"),
         ("UGQ", "User_generated")
     )
-    message = models.TextField(unique=True)
+    message = models.TextField()
     author = models.CharField(max_length=255)
     source = models.CharField(max_length=3, choices=SOURCE_CHOICE)
 
