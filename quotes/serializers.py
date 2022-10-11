@@ -5,4 +5,4 @@ from .models import *
 class QuoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quote
-        fields = ['message', 'author', 'source']
+        fields = ['text', 'author']
