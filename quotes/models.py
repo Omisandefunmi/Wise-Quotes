@@ -6,12 +6,12 @@ from django.contrib.auth.models import AbstractUser
 
 class Quote(models.Model):
     SOURCE_CHOICE = (
-        ("AGQ", "Api_generated"),
-        ("UGQ", "User_generated")
+        ("Api_generated", "AGQ"),
+        ("User_generated", "UGQ")
     )
     message = models.TextField(unique=True)
     author = models.CharField(max_length=255)
-    source = models.CharField(max_length=3, choices=SOURCE_CHOICE)
+    source = models.CharField(max_length=255, choices=SOURCE_CHOICE)
 
 
 # class User(AbstractUser):
